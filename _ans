@@ -1,0 +1,17 @@
+#compdef ans
+
+_ans() {
+  local -a args 
+  args=(
+    '(-a --append)'{-a,--append}'[Append to stored content]'
+    '(-c --clear)'{-c,--clear}'[Clear stored content]'
+    '(-q --quiet)'{-q,--quiet}'[Suppress any output]'
+    '(-h --help)'{-h,--help}'[Print help]'
+    '(-V --version)'{-V,--version}'[Print version]'
+  )
+
+  _arguments -S -s $args
+
+}
+
+_ans "$@"
